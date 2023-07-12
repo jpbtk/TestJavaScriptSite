@@ -1,38 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>Fade Up Effect</title>
-  <style>
-    #fade-up {
-      position: fixed;
-      bottom: 0;
-      display: none;
-      transition: opacity 1s, transform 1s;
-      transform: translateY(100%);
-    }
-
-    #fade-up img {
-      opacity: 0;
-      transition: opacity 1s, transform 1s;
-      transform: translateY(100%);
-    }
-  </style>
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const fadeUpElement = document.getElementById('fade-up');
-      const imageElement = fadeUpElement.querySelector('img');
-
-      fadeUpElement.style.display = 'block';
-      fadeUpElement.style.transform = 'translateY(0)';
-      imageElement.style.opacity = '1';
-      imageElement.style.transform = 'translateY(0)';
-    });
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黒犬鯖</title>
+  <link rel="stylesheet" href="styles.css"> <!-- スタイルシートのリンク -->
 </head>
 <body>
-  <div id="fade-up">
-    <img src="image/test.png" alt="Test Image">
-    <p><strong>これはテストメッセージです</strong></p>
-  </div>
+  <header>
+    <h1>黒犬鯖</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">ホーム</a></li>
+        <li><a href="#server">サーバー情報</a></li>
+        <li><a href="#community">コミュニティ</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>ようこそ黒犬鯖へ！</h2>
+    <p>黒犬鯖は、楽しく友達と一緒に遊べるMinecraftサーバーです。</p>
+  </section>
+
+  <section id="server">
+    <h2>サーバー情報</h2>
+    <p>IPアドレス: mc.example.com</p>
+    <p>バージョン: 1.17.1</p>
+    <p>ゲームモード: サバイバル</p>
+    <p>プラグイン: Essentials, WorldGuard, etc.</p>
+  </section>
+
+  <section id="community">
+    <h2>コミュニティ</h2>
+    <p>黒犬鯖では、プレイヤー同士の交流を大切にしています。一緒に冒険しましょう！</p>
+    <a href="discord">Discordサーバーに参加する</a>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>ご質問やお困りごとがありましたら、以下のフォームよりお気軽にお問い合わせください。</p>
+    <form>
+      <input type="text" placeholder="お名前" required>
+      <input type="email" placeholder="メールアドレス" required>
+      <textarea placeholder="お問い合わせ内容" required></textarea>
+      <button type="submit">送信</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2023 黒犬鯖. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script> <!-- JavaScriptファイルのリンク -->
 </body>
 </html>
