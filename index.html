@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fade Up Effect</title>
+  <style>
+    #fade-up {
+      position: fixed;
+      bottom: 0;
+      display: none;
+      transition: opacity 1s, transform 1s;
+      transform: translateY(100px);
+    }
+  </style>
+</head>
+<body>
+  <div id="fade-up"></div>
+
+  <script>
+    const fadeUpElement = document.getElementById('fade-up');
+
+    window.addEventListener('load', () => {
+      fadeUpElement.style.opacity = '0';
+      fadeUpElement.style.display = 'block';
+      fadeUpElement.style.transition = 'opacity 1s, transform 1s';
+      fadeUpElement.style.transform = 'translateY(100px)';
+      fadeUpElement.style.opacity = '1';
+    });
+  </script>
+</body>
+</html>
